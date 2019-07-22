@@ -1,6 +1,6 @@
 ---
 title: "Probability"
-output: statsr:::statswithr_lab
+output: html_document
 ---
 
 <div id="instructions">
@@ -78,7 +78,7 @@ occurrence).
 <li> hit </li>
 <li> miss </li>
 </ol>
-
+answer: hit
 
 2.  Fill in the blank: A streak length of 0 means one \_\_\_ which must occur after a 
 miss that ended the preceeding streak.
@@ -86,6 +86,7 @@ miss that ended the preceeding streak.
 <li> hit </li>
 <li> miss </li>
 </ol>
+answer: miss
 
 Counting streak lengths manually for all 133 shots would get tedious, so we'll
 use the custom function `calc_streak` to calculate them, and store the results
@@ -111,6 +112,7 @@ from the 2009 NBA finals.
 <li> The longest streak of baskets is of length 4. </li>
 <li> The shortest streak is of length 1.</li>
 </ol>
+answer: the shortest streak is of length 1
 
 ## Compared to What?
 
@@ -199,8 +201,9 @@ that we know only lands heads 20% of the time. We can adjust for this by adding
 an argument called `prob`, which provides a vector of two probability weights.
 
 ```{r sim-unfair-coin}
-sim_unfair_coin <- sample(coin_outcomes, size = 100, replace = TRUE, 
+sim_unfair_coin <- sample(coin_outcomes, size = 1000, replace = TRUE, 
                           prob = c(0.2, 0.8))
+table(sim_unfair_coin)
 ```
 
 `prob = c(0.2, 0.8)` indicates that for the two elements in the `outcomes` vector,
@@ -245,7 +248,9 @@ we need to align both their shooting percentage and the number of attempted shot
 </div>
 ```{r}
 # type your code for the Exercise here, and Knit
-
+sim_basket <- sample(shot_outcomes, size = 133, replace = TRUE, 
+                     prob = c(0.45, 0.55))
+table(sim_basket)
 ```
 
    
@@ -269,7 +274,7 @@ a hot hand.
 </div>
 ```{r sim-streak-lengths}
 # type your code for the Exercise here, and Knit
-
+sim_streak <- calc_streak(sim_basket)
 ```
    
 <div id="exercise">
@@ -277,6 +282,8 @@ a hot hand.
 </div>
 ```{r plot-sim-streaks}
 # type your code for the Exercise here, and Knit
+ggplot(data = sim_streak, aes(x = length)) +
+        geom_histogram(binwidth = 1)
 
 ```
 
@@ -288,7 +295,7 @@ exercise above?
 <li> Somewhat similar </li>
 <li> Totally different </li>
 </ol>
-
+answer: somewhat similar
 
 5.  How does Kobe Bryant's distribution of streak lengths compare to the distribution 
 of streak lengths for the simulated shooter? Using this comparison, do you have 
@@ -299,6 +306,7 @@ evidence that the hot hand model fits Kobe's shooting patterns?
 <li> The distributions look very different. Therefore, there doesn't appear to be evidence for Kobe Bryant's hot hand. </li>
 <li> The distributions look very different. Therefore, there appears to be evidence for Kobe Bryant's hot hand. </li>
 </ol>
+answer: the disbributions look very similar. Therefore, there doesn't apper to be evidence or Kobe Bryant's hot hand.
 
 <div id="exercise">
 **Exercise**: What concepts from the course videos are covered in this lab? What 
