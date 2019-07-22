@@ -31,6 +31,7 @@ Let's load the packages.
 library(statsr)
 library(dplyr)
 library(ggplot2)
+library(tidyverse)
 ```
 
 ### Data
