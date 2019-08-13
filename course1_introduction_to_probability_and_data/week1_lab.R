@@ -1,6 +1,5 @@
 # introduction to probability and data, Duke University
 # week 1 lab, introduction to R and RStudio
-
 # preparation
 rm(list = ls())
 # obtain the current source file work directory
@@ -99,7 +98,27 @@ df %>% arrange(desc(total)) %>% head()
 
 
 
+# week 4 practice questions -----------------------------------------------
+# q2
+dbinom(2, size = 3, prob = 0.51)
 
+# q3
+1 - pnorm(34, mean = 24, sd = 4)
+
+
+# week 4 quiz -------------------------------------------------------------
+# q2
+sum(dbinom(1:10, size = 10, prob = 0.07))
+
+# q7
+1 - sum(dbinom(0:34, size = 3000000, prob = 0.00001))
+1 - pnorm(34.5, mean = 3000000 * 0.00001, sd = sqrt(3000000*0.00001*(1-0.00001)))
+
+
+
+
+updateR(fast = FALSE, browse_news = TRUE, install_R = TRUE, copy_packages = TRUE,
+        copy_Rprofile.site = TRUE, keep_old_packages = TRUE, update_packages = TRUE) # install, move, update.package, quit R.
 
 
 
