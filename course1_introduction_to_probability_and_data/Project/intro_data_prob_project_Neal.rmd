@@ -1,0 +1,81 @@
+---
+title: Exploring BRFSS Data
+author: Neal Yu
+date: "`r Sys.Date()`"
+output:
+  prettydoc::html_pretty:
+    theme: tactile
+    highlight: github
+---
+
+## Setup
+
+### Load packages
+
+```{r load-packages, message = FALSE}
+library(tidyverse)
+library(prettydoc)
+```
+
+### Load data
+
+```{r load-data}
+load("brfss2013.RData")
+df <- as_tibble(brfss2013)
+```
+
+
+
+* * *
+
+## Part 1: Data
+### Data overview
+The BRFSS objective is to collect uniform, state-specific data on preventive health practices and risk behaviors that are linked to chronic diseases, injuries, and preventable infections diseases that affect the adult population. Health characteristics estimated from BRFSS pertain to the non-institutionalized adult population, aged 18 years or order, who reside in the US.
+
+### Generalizability
+According to the code book, for landline telephone survey, interviewers collect data from a randomly selected adult in a household. Thus, we may assume the conclusion is generalizable. However, for celluar telephone survey, interviewers collect data from an adult who participates by using a cellular telephone. The sample might be limited to those who participates so that the conslution may not be generalizable.
+On the other hand, since more and more people are using cellphone nowadays, in order to capture whole population health characteristics, more celluar telephone survey needs to be implemented in the future.
+
+### Causality
+There does not seem to be any random assignment associated with the survey. It's an observational study. Thus, it might be hard to draw some conclusion realted to causality.
+* * *
+
+## Part 2: Research questions
+
+**Research quesion 1: How many people participated the survey in each state and which state are more healthy?**
+
+**Research quesion 2:**
+
+**Research quesion 3:**
+
+
+* * *
+
+## Part 3: Exploratory data analysis
+
+NOTE: Insert code chunks as needed by clicking on the "Insert a new code chunk" 
+button (green button with orange arrow) above. Make sure that your code is visible
+in the project you submit. Delete this note when before you submit your work.
+
+**Research quesion 1:**
+
+```{r}
+
+```
+
+
+
+**Research quesion 2:**
+
+```{r}
+
+```
+
+
+
+**Research quesion 3:**
+
+```{r}
+
+```
+
