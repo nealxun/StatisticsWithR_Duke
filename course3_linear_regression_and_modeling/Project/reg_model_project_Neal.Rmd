@@ -1,0 +1,75 @@
+---
+title: "Modeling and prediction for movies"
+author: "Neal Yu"
+date: "`r Sys.Date()`"
+output: 
+  html_document: 
+    fig_height: 4
+    highlight: pygments
+    theme: spacelab
+---
+
+## Setup
+
+### Load packages
+
+```{r load-packages, message = FALSE}
+library(ggplot2)
+library(dplyr)
+library(statsr)
+```
+
+### Load data
+
+```{r load-data}
+load("movies.Rdata")
+```
+
+
+
+* * *
+
+## Part 1: Data
+Looks like the data was collected through observational study. Since all the 651
+movies are randomly sampled, the generalibility target can be achieved. Also, because
+there is no controled experiment thus no random assignment applied, any causality
+related conclusion may be reserved.
+
+* * *
+
+## Part 2: Research question
+#### What similarities are among popular movies (good rating)?
+* For audience, it might be helpful for them to select movies to watch.
+* For movie producer, it can help them to make more popular movies via tuning some
+of the features.
+
+
+* * *
+
+## Part 3: Exploratory data analysis
+
+```{r dependent variable}
+
+```
+
+
+* * *
+
+## Part 4: Modeling
+
+NOTE: Insert code chunks as needed by clicking on the "Insert a new code chunk" 
+button above. Make sure that your code is visible in the project you submit. 
+Delete this note when before you submit your work.
+
+* * *
+
+## Part 5: Prediction
+
+NOTE: Insert code chunks as needed by clicking on the "Insert a new code chunk" 
+button above. Make sure that your code is visible in the project you submit. 
+Delete this note when before you submit your work.
+
+* * *
+
+## Part 6: Conclusion
+
